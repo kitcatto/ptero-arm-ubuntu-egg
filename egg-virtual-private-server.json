@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-02-23T17:40:01-05:00",
+    "name": "Virtual Private Server",
+    "author": "kitcat3920@gmail.com",
+    "description": "Run an Ubuntu VPS in Pterodactyl that runs on ARM.",
+    "features": null,
+    "docker_images": {
+        "docker.io\/kitcatto\/ptero-arm-ubuntu": "docker.io\/kitcatto\/ptero-arm-ubuntu"
+    },
+    "file_denylist": [],
+    "startup": ".\/start.sh",
+    "config": {
+        "files": "{\r\n    \"vps.config\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"internalip\": \"0.0.0.0\",\r\n            \"port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
+        "startup": "{\r\n    \"done\": \"Welcome to Ubuntu 22.04!\"\r\n}",
+        "logs": "{}",
+        "stop": "shutdown now"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n\r\ncd \/mnt\/server\/",
+            "container": "docker.io\/kitcatto\/ptero-arm-ubuntu",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
