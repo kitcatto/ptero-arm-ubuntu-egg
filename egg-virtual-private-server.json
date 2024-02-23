@@ -18,7 +18,7 @@
         "files": "{\r\n    \"vps.config\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"internalip\": \"0.0.0.0\",\r\n            \"port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Welcome to Ubuntu 22.04!\"\r\n}",
         "logs": "{}",
-        "stop": "shutdown now"
+        "stop": "exit"
     },
     "scripts": {
         "installation": {
